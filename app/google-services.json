@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "946098017623",
+    "project_id": "otpapp-e12d1",
+    "storage_bucket": "otpapp-e12d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946098017623:android:342a75c1f9027ba9e75a12",
+        "android_client_info": {
+          "package_name": "com.example.otpapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzftD6gmyOjyQZ4G9zLfquZy85tR5XL2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
