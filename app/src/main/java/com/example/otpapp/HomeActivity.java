@@ -35,7 +35,7 @@ import java.util.Locale;
 
 public class HomeActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
-    Button signout,btnlink;
+    Button signout,btnlink,btncalllog;
 
     FusedLocationProviderClient fusedLocationProviderClient;
     TextView lattitude,longitude,address,city,country;
@@ -58,6 +58,14 @@ public class HomeActivity extends AppCompatActivity {
         getlocation = findViewById(R.id.getLocation);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         btnlink = findViewById(R.id.goToMap);
+        btncalllog = findViewById(R.id.calllog);
+        btncalllog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,CalllogActivity.class));
+
+            }
+        });
 
         getlocation.setOnClickListener(new View.OnClickListener() {
             @Override

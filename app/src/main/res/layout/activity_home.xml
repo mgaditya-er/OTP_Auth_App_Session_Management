@@ -21,6 +21,17 @@
 
 
     <!-- Location Tutorial Fields -->
+
+    <Button
+        android:id="@+id/calllog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="140dp"
+        android:text="Call log" />
+
     <TextView
         android:id="@+id/heading"
         android:layout_width="match_parent"
