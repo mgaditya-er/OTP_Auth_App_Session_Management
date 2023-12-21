@@ -7,12 +7,15 @@ import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
 import android.app.DownloadManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,7 +35,7 @@ import java.util.Locale;
 
 public class HomeActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
-    Button signout;
+    Button signout,btnlink;
 
     FusedLocationProviderClient fusedLocationProviderClient;
     TextView lattitude,longitude,address,city,country;
@@ -54,6 +57,8 @@ public class HomeActivity extends AppCompatActivity {
         country = findViewById(R.id.country);
         getlocation = findViewById(R.id.getLocation);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        btnlink = findViewById(R.id.goToMap);
+
         getlocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,6 +101,26 @@ public class HomeActivity extends AppCompatActivity {
                                     address.setText("Address :"+addresses.get(0).getAddressLine(0));
                                     city.setText("City :"+addresses.get(0).getLocality());
                                     country.setText("Country :"+addresses.get(0).getCountryName());
+                                    btnlink.setEnabled(true);
+
+                                    List<Address> finalAddresses = addresses;
+                                    btnlink.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            // Construct the Google Maps link
+                                            String googleMapsLink = "https://www.google.com/maps?q=" +
+                                                    finalAddresses.get(0).getLatitude() + "," +
+                                                    finalAddresses.get(0).getLongitude();
+                                            ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                                            ClipData clipData = ClipData.newPlainText("Google Maps Link", googleMapsLink);
+                                            clipboardManager.setPrimaryClip(clipData);
+                                            Toast.makeText(HomeActivity.this, "Link copied to clipboard", Toast.LENGTH_SHORT).show();
+
+                                            // Open the link in a web browser
+                                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(googleMapsLink));
+                                            startActivity(intent);
+                                        }
+                                    });
 
                                 } catch (IOException e) {
                                     Toast.makeText(HomeActivity.this, e+"error", Toast.LENGTH_SHORT).show();
@@ -106,6 +131,7 @@ public class HomeActivity extends AppCompatActivity {
                             }
                         }
                     });
+
         }
         else {
             askpermission();

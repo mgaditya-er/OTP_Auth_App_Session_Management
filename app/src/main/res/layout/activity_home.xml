@@ -19,6 +19,7 @@
 
     <!-- Add other UI elements or features for your home page as needed -->
 
+
     <!-- Location Tutorial Fields -->
     <TextView
         android:id="@+id/heading"
@@ -32,16 +33,41 @@
         android:textSize="60dp"
         android:layout_below="@+id/signOutButton" />
 
+
     <Button
+        android:id="@+id/getLocation"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:backgroundTint="#6750A3"
-        android:id="@+id/getLocation"
-        android:text="Get Location"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/heading"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
-        />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="418dp"
+        android:layout_marginBottom="99dp"
+        android:backgroundTint="#6750A3"
+        android:text="Get Location"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/goToMap"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_below="@+id/heading"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="99dp"
+        android:layout_toEndOf="@+id/getLocation"
+        android:backgroundTint="#6750A3"
+        android:clickable="false"
+        android:drawableStart="@android:drawable/ic_dialog_map"
+        android:text="Link"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
