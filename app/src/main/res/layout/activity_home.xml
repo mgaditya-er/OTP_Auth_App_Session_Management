@@ -6,16 +6,6 @@
     android:background="#F5F5F5"
     tools:context=".HomeActivity">
 
-    <!-- Welcome text in large font size -->
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Your App!"
-        android:textSize="30sp"
-        android:textColor="#000000"
-        android:layout_centerInParent="true"/>
-
     <!-- Sign-out button in right upper corner -->
     <Button
         android:id="@+id/signOutButton"
@@ -29,4 +19,101 @@
 
     <!-- Add other UI elements or features for your home page as needed -->
 
+    <!-- Location Tutorial Fields -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Location "
+        android:fontFamily="cursive"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="60dp"
+        android:layout_below="@+id/signOutButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:backgroundTint="#6750A3"
+        android:id="@+id/getLocation"
+        android:text="Get Location"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/latitude"
+        android:text="Latitude"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/heading"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+
+        android:textStyle="bold"
+    android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/longitude"
+        android:layout_below="@+id/latitude"
+        android:layout_centerHorizontal="true"
+        android:text="Longitude"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+
+        android:textStyle="bold"
+    android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:layout_below="@+id/longitude"
+        android:layout_centerHorizontal="true"
+        android:text="Address"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+
+        android:textStyle="bold"
+    android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/city"
+        android:layout_below="@+id/address"
+        android:layout_centerHorizontal="true"
+        android:text="City"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+    android:textColor="@android:color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/country"
+        android:layout_below="@+id/city"
+        android:layout_centerHorizontal="true"
+        android:text="Country"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+
+        android:textStyle="bold"
+    android:textColor="@android:color/black"/>
 </RelativeLayout>
