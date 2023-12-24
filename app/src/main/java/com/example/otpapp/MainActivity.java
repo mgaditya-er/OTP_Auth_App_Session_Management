@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 @NonNull PhoneAuthProvider.ForceResendingToken token) {
           super.onCodeSent(s,token);
             verficationId = s;
-            Toast.makeText(MainActivity.this, "Code Sent", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Code Sent.", Toast.LENGTH_SHORT).show();
             btnverifyotp.setEnabled(true);
             btnsendotp.setEnabled(false);
             phone.setEnabled(false);
