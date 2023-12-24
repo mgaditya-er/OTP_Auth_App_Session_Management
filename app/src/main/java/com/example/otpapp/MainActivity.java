@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
             Toast.makeText(MainActivity.this, "Verification Failed", Toast.LENGTH_SHORT).show();
+            bar.setVisibility(View.INVISIBLE);
 
             // Show a message and update the UI
         }
@@ -121,6 +122,9 @@ public class MainActivity extends AppCompatActivity {
             verficationId = s;
             Toast.makeText(MainActivity.this, "Code Sent", Toast.LENGTH_SHORT).show();
             btnverifyotp.setEnabled(true);
+            btnsendotp.setEnabled(false);
+            phone.setEnabled(false);
+            otp.setEnabled(true);
             bar.setVisibility(View.INVISIBLE);
 
         }

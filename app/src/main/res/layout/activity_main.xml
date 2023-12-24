@@ -3,17 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/baseline_two_wheeler_24"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
 
     <!-- Input field for entering the phone number -->
     <EditText
         android:id="@+id/editTextPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
         android:hint="Enter Phone Number"
         android:inputType="phone"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:enabled="true"/>
+
 
     <!-- Button to send OTP -->
     <Button
@@ -24,18 +37,19 @@
         android:layout_below="@id/editTextPhoneNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"/>
+        android:enabled="true"/>
 
     <!-- Input field for entering the OTP -->
     <EditText
         android:id="@+id/editTextOtp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSendOtp"
         android:hint="Enter OTP"
         android:inputType="number"
-        android:layout_below="@id/buttonSendOtp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:enabled="false"/>
 
     <!-- Button to verify OTP -->
     <Button
@@ -46,15 +60,15 @@
         android:layout_below="@id/editTextOtp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="8dp"
         android:enabled="false"/>
+
+    <!-- Progress Bar -->
     <ProgressBar
         android:id="@+id/bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonVerifyOtp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:visibility="invisible"/>
-
-
 </RelativeLayout>
