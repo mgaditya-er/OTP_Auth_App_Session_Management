@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mAuth = FirebaseAuth.getInstance();
-        signout = findViewById(R.id.signOutButton);
+            signout = findViewById(R.id.signOutButton);
 
         lattitude = findViewById(R.id.latitude);
         longitude = findViewById(R.id.longitude);
@@ -81,6 +81,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
+
                 startActivity(new Intent(HomeActivity.this,MainActivity.class));
                 finish();
             }

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">OTPApp</string>
+    <string name="app_name">DriveGuard</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">close Navigation Drawer</string>
 </resources>
