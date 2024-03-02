@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.OTPApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/color1</item>
-        <item name="colorPrimaryVariant">@color/color1</item>
-        <item name="android:statusBarColor">@color/color1</item>
+         <item name="colorPrimary">#FF147E13</item>
+        <item name="colorPrimaryVariant">#CB147E13</item>
+        <item name="android:statusBarColor">#97147E13</item>
     </style>
 
     <style name="Theme.OTPApp" parent="Base.Theme.OTPApp" />

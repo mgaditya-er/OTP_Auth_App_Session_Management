@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#FFBFB9B0"
     tools:context=".MainActivity">
 
     <!-- Image -->
@@ -11,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/baseline_two_wheeler_24"
+        android:src="@drawable/bike"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
 
@@ -19,13 +20,20 @@
     <EditText
         android:id="@+id/editTextPhoneNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/imageView"
+        android:background="@drawable/round_back_dark_green5_15"
         android:hint="Enter Phone Number"
+        android:textSize="16sp"
         android:inputType="phone"
+        android:paddingStart="20dp"
+        android:maxLines="1"
+        android:paddingEnd="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:enabled="true"/>
+        android:enabled="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"/>
 
 
     <!-- Button to send OTP -->
@@ -43,13 +51,21 @@
     <EditText
         android:id="@+id/editTextOtp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/buttonSendOtp"
         android:hint="Enter OTP"
+        android:maxLines="1"
         android:inputType="number"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:textSize="16sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/round_back_dark_green5_15"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        />
 
     <!-- Button to verify OTP -->
     <Button
@@ -60,7 +76,8 @@
         android:layout_below="@id/editTextOtp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:enabled="false"/>
+        android:enabled="false"
+        />
 
     <!-- Progress Bar -->
     <ProgressBar
